@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="40dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="404dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#7128E0"
+        android:padding="14dp"
+        android:text="Tip Time"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/cost_of_service_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter cost of service"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="10dp"
+        android:minHeight="48dp"
+        android:padding="12dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How was the service?"
+        android:textSize="16sp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:layout_marginBottom="8dp" />
+
+    <RadioGroup
+        android:id="@+id/tip_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/amazing_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Amazing (20%)"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/good_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Good (18%)"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/ok_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK (15%)"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Round up tip?"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:textStyle="bold"/>
+
+        <Switch
+            android:id="@+id/round_up_switch"
+            android:layout_width="290dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/calculate_button"
+        android:layout_width="390dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/corner"
+        android:text="CALCULATE"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/tip_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tip Amount: $0.00"
+        android:textSize="15sp"
+        android:paddingLeft="225dp"
+        android:layout_marginTop="1dp"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>
